@@ -18,6 +18,4 @@
 2. 打包為應用程式：
    npm run dist   
 3. 打包後該專案資料夾下會多出一個dist資料夾
-4-1. 使用dist資料夾下的.exe安裝
-   或者
-4.2. 進入dist資料夾下的win-unpacked資料夾，該目錄下的.exe即可直接開啟
+4. 使用dist資料夾下的.exe安裝 / 進入dist資料夾下的win-unpacked資料夾，該目錄下的.exe即可直接開啟
