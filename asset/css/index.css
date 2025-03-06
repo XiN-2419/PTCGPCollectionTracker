@@ -1,0 +1,331 @@
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+/* 全域滾動條樣式 */
+::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2a2a2a;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444444;
+    border-radius: 10px;
+    border: 3px solid #2a2a2a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555555;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #666666;
+}
+
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.header .logo {
+    font-size: 24px;
+}
+.header nav a {
+    color: #ffffff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.container {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+}
+.container .item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    text-align: center;
+    width: 100%;
+}
+.container .item .packimg {
+    height: 256px;
+    width: 128px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+.table, th, td {
+    border: 1px solid #444444;
+    padding: 10px;
+    text-align: center;
+}
+.table th,td {
+    width: 11%;
+}
+.table th {
+    background-color: #333333;
+}
+
+.cardRarity {
+    height: 25px;
+}
+
+.basicBtn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #02548f;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.basicBtn:hover {
+    background-color: #005fa3;
+    transform: scale(1.05);
+}
+.basicBtn:active {
+    background-color: #004080;
+    transform: scale(1);
+}
+.collectionBtnLeft {
+    width: 45%;
+    text-align: left;
+}
+.collectionBtnright {
+    width: 45%;
+    text-align: end;
+}
+.compareBtn {
+    padding: 6px 24px;
+    border: 2px solid #ff9800;
+    border-radius: 8px;
+    background-color: #ff9800;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: background-color 0.3s, transform 0.3s, border-color 0.3s;
+}
+.compareBtn:hover {
+    background-color: #ffa726;
+    border-color: #ffa726;
+    transform: scale(1.05);
+}
+.compareBtn:active {
+    background-color: #fb8c00;
+    border-color: #fb8c00;
+    transform: scale(1);
+}
+
+
+.readNsaveMessage {
+    position: absolute;
+    top: -30px; /* 調整位置 */
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(224, 106, 106);
+    background-color: #2a2a2a;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none; /* 禁止鼠標事件 */
+}
+
+.readNsaveMessage.show {
+    opacity: 1;
+}
+
+
+.filterBtn {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 164px; 
+    height: 73px;
+    border: none; 
+    cursor: pointer; 
+    background-color: transparent;
+    display: inline-block;
+    text-indent: -9999px;
+}
+#filterMewtwo {
+    background-image: url('../img/geneticApexMewtwo.png');
+}
+#filterCharizard {
+    background-image: url('../img/geneticApexcharizard.png');
+}
+#filterPikachu{
+    background-image: url('../img/geneticApexpikachu.png');
+}
+#filterA1{
+    background-image: url('../img/geneticApexA1.png');
+}
+#filterMew{
+    background-image: url('../img/MythicalIsland.png');
+}
+#filterdialga{
+    background-image: url('../img/SpaceTimeDialga.png');
+}
+#filterpalkia{
+    background-image: url('../img/SpaceTimePalkia.png');
+}
+#filterA2{
+    background-image: url('../img/SpaceTime.png');
+}
+
+
+.container .item .pokeomOwnCheckbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #444;
+    border: 2px solid #888;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.container .item .pokeomOwnCheckbox:checked {
+    background-color: #00aaff;
+    border-color: #0077cc;
+}
+
+#backToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0.5s; /* 添加淡入淡出效果 */
+  visibility: hidden; /* 初始隐藏 */
+}
+
+#backToTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#backToTopBtn:hover {
+  background-color: #333;
+}
+
+
+#fileSelect {
+    appearance: none;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #444444;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 100px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+#fileSelect:hover {
+    background-color: #333333;
+    border-color: #555555;
+}
+#fileSelect:focus {
+    outline: none;
+    border-color: #0077cc;
+}
+
+
+/* Lightbox styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+  
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    color: #ffffff;
+    max-height: 80%; /* 限制高度 */
+    overflow-y: auto; /* 垂直滾動 */
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#compareTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#compareTable th, #compareTable td {
+    border: 1px solid #444444;
+    padding: 10px;
+    text-align: center;
+}
+
+#compareTable th {
+    background-color: #333333;
+}
+.compareRarityImg{
+    height: 25px;
+}
+
+.compareBox {
+    display: flex;
+}
+
+.compareBoxLeft, .compareBoxRight {
+    width: 48%;
+}
+

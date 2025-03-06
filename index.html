@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="language" content="zh-TW">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTCGP Tracker</title>
+    <link rel="stylesheet" href="./asset/css/index.css">
+  </head>
+  <body>
+    
+    <div class="wrapper">
+        
+        <div class="header">
+            <div class="logo">PTCGP Tracker</div>
+            <nav>
+                <a href="#collection">收藏卡片</a>
+            </nav>
+        </div>
+
+        <div class="container">
+            <h1>卡包完成率</h1>
+            <div class="item">
+                <div>
+                    <h3>超夢包</h6>
+                    <img src="./asset/img/mewtwo.jpg" class="packimg" alt="超夢">
+                    <p id="mewtwoPercentage"></p>
+                    <p id="mewtwoDiv"></p>
+                </div>
+                <div>
+                    <h3>皮卡丘包</h6>
+                    <img src="./asset/img/pikachu.jpg" class="packimg" alt="皮卡丘">
+                    <p id="pikachuPercentage"></p>
+                    <p id="pikachuDiv"></p>
+                </div>
+                <div>
+                    <h3>噴火龍包</h6>
+                    <img src="./asset/img/charizard.jpg" class="packimg" alt="噴火龍">
+                    <p id="charizardPercentage"></p>
+                    <p id="charizardDiv"></p>
+                </div>
+                <div style="display: none;">
+                    <p id="a1Percentage"></p>
+                    <p id="a1Div"></p>
+                </div>
+                <div>
+                    <h3>幻遊島包</h6>
+                    <img src="./asset/img/mew.jpg" class="packimg" alt="夢幻">
+                    <p id="mewPercentage"></p>
+                    <p id="mewDiv"></p>
+                </div>
+                <div>
+                    <h3>帝牙盧卡包</h6>
+                    <img src="./asset/img/dialga.jpg" class="packimg" alt="帝牙盧卡">
+                    <p id="dialgaPercentage"></p>
+                    <p id="dialgaDiv"></p>
+                </div>
+                <div>
+                    <h3>帕路奇亞包</h6>
+                    <img src="./asset/img/palkia.jpg" class="packimg" alt="帕路奇亞">
+                    <p id="palkiaPercentage"></p>
+                    <p id="palkiaDiv"></p>
+                </div>
+                <div style="display: none;">
+                    <p id="a2Percentage"></p>
+                    <p id="a2Div"></p>
+                </div>
+            </div>
+            <div class="item">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>卡包</th>
+                            <th><img src="./asset/img/1s.png" class="cardRarity"></th>
+                            <th><img src="./asset/img/2s.png" class="cardRarity"></th>
+                            <th><img src="./asset/img/3s.png" class="cardRarity"></th>
+                            <th><img src="./asset/img/4s.png" class="cardRarity"></th>
+                            <th><img src="./asset/img/1g.png" class="cardRarity"></th>
+                            <th><img src="./asset/img/2g.png" class="cardRarity"></th>
+                            <th><img src="./asset/img/3g.png" class="cardRarity"></th>
+                            <th><img src="./asset/img/1c.png" class="cardRarity"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>超夢包</td>
+                            <td id="mewtwo1s"></td>
+                            <td id="mewtwo2s"></td>
+                            <td id="mewtwo3s"></td>
+                            <td id="mewtwo4s"></td>
+                            <td id="mewtwo1g"></td>
+                            <td id="mewtwo2g"></td>
+                            <td id="mewtwo3g"></td>
+                            <td id="mewtwo1c"></td>
+                        </tr>
+                        <tr>
+                            <td>皮卡丘包</td>
+                            <td id="pikachu1s"></td>
+                            <td id="pikachu2s"></td>
+                            <td id="pikachu3s"></td>
+                            <td id="pikachu4s"></td>
+                            <td id="pikachu1g"></td>
+                            <td id="pikachu2g"></td>
+                            <td id="pikachu3g"></td>
+                            <td id="pikachu1c"></td>
+                        </tr>
+                        <tr>
+                            <td>噴火龍包</td>
+                            <td id="charizard1s"></td>
+                            <td id="charizard2s"></td>
+                            <td id="charizard3s"></td>
+                            <td id="charizard4s"></td>
+                            <td id="charizard1g"></td>
+                            <td id="charizard2g"></td>
+                            <td id="charizard3g"></td>
+                            <td id="charizard1c"></td>
+                        </tr>
+                        <tr>
+                            <td>A1包普池</td>
+                            <td id="a11s"></td>
+                            <td id="a12s"></td>
+                            <td id="a13s"></td>
+                            <td id="a14s"></td>
+                            <td id="a11g"></td>
+                            <td id="a12g"></td>
+                            <td id="a13g"></td>
+                            <td id="a11c"></td>
+                        </tr>
+                        <tr>
+                            <td>幻遊島</td>
+                            <td id="mew1s"></td>
+                            <td id="mew2s"></td>
+                            <td id="mew3s"></td>
+                            <td id="mew4s"></td>
+                            <td id="mew1g"></td>
+                            <td id="mew2g"></td>
+                            <td id="mew3g"></td>
+                            <td id="mew1c"></td>
+                        </tr>
+                        <tr>
+                            <td>帝牙盧卡</td>
+                            <td id="dialga1s"></td>
+                            <td id="dialga2s"></td>
+                            <td id="dialga3s"></td>
+                            <td id="dialga4s"></td>
+                            <td id="dialga1g"></td>
+                            <td id="dialga2g"></td>
+                            <td id="dialga3g"></td>
+                            <td id="dialga1c"></td>
+                        </tr>
+                        <tr>
+                            <td>帕路奇亞</td>
+                            <td id="palkia1s"></td>
+                            <td id="palkia2s"></td>
+                            <td id="palkia3s"></td>
+                            <td id="palkia4s"></td>
+                            <td id="palkia1g"></td>
+                            <td id="palkia2g"></td>
+                            <td id="palkia3g"></td>
+                            <td id="palkia1c"></td>
+                        </tr>
+                        <tr>
+                            <td>A2包普池</td>
+                            <td id="a21s"></td>
+                            <td id="a22s"></td>
+                            <td id="a23s"></td>
+                            <td id="a24s"></td>
+                            <td id="a21g"></td>
+                            <td id="a22g"></td>
+                            <td id="a23g"></td>
+                            <td id="a21c"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1>收藏卡片</h1>
+            <div class="item">
+                <button type="button" id="filterMewtwo" class="filterBtn"></button>
+                <button type="button" id="filterCharizard" class="filterBtn"></button>
+                <button type="button" id="filterPikachu" class="filterBtn"></button>
+                <button type="button" id="filterA1" class="filterBtn"></button>
+                <button type="button" id="filterMew" class="filterBtn"></button>
+                <button type="button" id="filterdialga" class="filterBtn"></button>
+                <button type="button" id="filterpalkia" class="filterBtn"></button>
+                <button type="button" id="filterA2" class="filterBtn"></button>
+                <button type="button" id="clearFilter" class="basicBtn">全卡包顯示</button>
+            </div>
+            <div class="item">
+                <div class="collectionBtnLeft">
+                    <button type="button" id="checkboxAllSelect" class="basicBtn">全部選擇</button>
+                    <button type="button" id="checkboxAllUnselect" class="basicBtn">全部取消</button>    
+                </div>
+                <div class="collectionBtnright" style="position: relative;">
+                    <div id="readNsaveMessage" class="readNsaveMessage"></div>
+                    選擇配置存檔：
+                    <select id="fileSelect">
+                        <option value="saveFile1.json">存檔一</option>
+                        <option value="saveFile2.json">存檔二</option>
+                    </select>                      
+                    <button type="button" id="ownRead" class="basicBtn">讀取</button>
+                    <button type="button" id="ownWrite" class="basicBtn">儲存</button>
+                </div>
+            </div>
+            <div class="item">
+                <button type="button" id="saveCompare" class="compareBtn">存檔一與存檔二可交換卡片比對</button>
+            </div>
+            <div class="item">
+                <table class="table" id="collection">
+                    <thead>
+                        <tr>
+                            <th>是否擁有</th>
+                            <th>卡片編號</th>
+                            <th>卡片名稱</th>
+                            <th>所屬卡包</th>
+                            <th>卡片稀有度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- 存檔一與存檔二的比較light box -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content">
+            <table id="compareTable">
+            <thead>
+                <tr>
+                <th colspan="3">存檔一缺少而存檔二擁有的卡片</th>
+                <th colspan="3">存檔二缺少而存檔一擁有的卡片</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="6"><img src="./asset/img/1s.png" class="compareRarityImg"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="compareBoxLeft">
+                        <table id="compare1sLeft">
+                            <!-- 1s Rows will be inserted here -->
+                        </table>
+                    </td>
+                    <td colspan="3" class="compareBoxRight">
+                        <table id="compare1sRight">
+                            <!-- 1s Rows will be inserted here -->
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6"><img src="./asset/img/2s.png" class="compareRarityImg"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="compareBoxLeft">
+                        <table id="compare2sLeft">
+                            <!-- 2s Rows will be inserted here -->
+                        </table>
+                    </td>
+                    <td colspan="3" class="compareBoxRight">
+                        <table id="compare2sRight">
+                            <!-- 2s Rows will be inserted here -->
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6"><img src="./asset/img/3s.png" class="compareRarityImg"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="compareBoxLeft">
+                        <table id="compare3sLeft">
+                            <!-- 3s Rows will be inserted here -->
+                        </table>
+                    </td>
+                    <td colspan="3" class="compareBoxRight">
+                        <table id="compare3sRight">
+                            <!-- 3s Rows will be inserted here -->
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6"><img src="./asset/img/4s.png" class="compareRarityImg"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="compareBoxLeft">
+                        <table id="compare4sLeft">
+                            <!-- 4s Rows will be inserted here -->
+                        </table>
+                    </td>
+                    <td colspan="3" class="compareBoxRight">
+                        <table id="compare4sRight">
+                            <!-- 4s Rows will be inserted here -->
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6"><img src="./asset/img/1g.png" class="compareRarityImg"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="compareBoxLeft">
+                        <table id="compare1gLeft">
+                            <!-- 1g Rows will be inserted here -->
+                        </table>
+                    </td>
+                    <td colspan="3" class="compareBoxRight">
+                        <table id="compare1gRight">
+                            <!-- 1g Rows will be inserted here -->
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <button id="backToTopBtn" title="回到頂端">回到頂端</button>
+
+    <script type="module" src="./asset/js/index.js"></script>
+  </body>
+</html>

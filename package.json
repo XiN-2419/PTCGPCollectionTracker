@@ -1,0 +1,52 @@
+{
+  "name": "06.ptcgpcollectiontracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "XiN2419",
+  "license": "ISC",
+  "build": {
+    "appId": "XiN2419.ptcgpcollectiontracker",
+    "files": [
+      "index.html",
+      "main.js",
+      "preload.js",
+      "asset/**/*"
+    ],
+    "directories": {
+      "buildResources": "build"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "build/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "build"
+    },
+    "asarUnpack": "**/*",
+    "extraResources": [
+      {
+        "from": "node_modules",
+        "to": "node_modules",
+        "filter": ["**/*"]
+      }
+    ]
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "electron": "^34.1.1",
+    "electron-builder": "^25.1.8"
+  }
+}
